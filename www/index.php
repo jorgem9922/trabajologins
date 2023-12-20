@@ -1,55 +1,68 @@
 <?php 
-
-/* *********************************************************************** */
-/* *********************  Programa principal  **************************** */
-/* **************** Menu de selección de opciones ************************ */
-/* *********************************************************************** */
-
-include "header.php"
+	/* Desarrollado por: PROGRAMANDO BROTHERS 	
+	Suscribete a : https://www.youtube.com/ProgramandoBrothers y comparte los v�deos.
+	Recuerda: "EL CONOCIMIENTO SE COMPARTE, POR M�S POCO QUE SEA".
+	*/
+    //verificar si mi session a�n existe, si existe entonces que no nos deje pasar a index, 
+    // y la redireccionamos a prinpipal hasta q la session se destruya
+    session_start();
+    if(isset($_SESSION['usuario'])){
+        header("Location: principal.php");
+    }
 ?>
+<!DOCTYPE html>
+<html class="login-bg" lang="es">
+<head>
+    <title>PB - Iniciar Sesión</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=uft-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- bootstrap -->
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet" />    
+    <link href="css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
 
-<div class="container my-5">
-    <div class="row">
-        <div class="col text-center">
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="css/compiled/layout.css" />
+    <link rel="stylesheet" type="text/css" href="css/compiled/elements.css" />
+    <link rel="stylesheet" type="text/css" href="css/compiled/icons.css" />
 
-            <div class="card">
-            
-                <div class="card-header display-6">
-                    Acciones sobre la base de datos
+    <!-- libraries -->
+    <link rel="stylesheet" type="text/css" href="css/lib/font-awesome.css" />
+    
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="css/compiled/signup.css" type="text/css" media="screen" />
+
+    <!-- open sans font -->
+    <link href='http://fonts.googleapis.com/css?family=OpenSans:300italic,400italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div class="header">
+        <a href="index.php">
+            <img src="css/images/PB.png" class="logo" alt="logo" />
+        </a>
+    </div>
+    <div class="login-wrapper">
+        <form id="miFormulario" action="login.php" method="POST">
+        
+            <div class="box">
+                <div class="content-wrap">
+                    <h6>Iniciar Sesión</h6>
+                    <input name="usuario" id="usuario" class="form-control" type="text" placeholder="Usuario" required autofocus>
+                    <input name="contra" id="contra" class="form-control" type="password" placeholder="Contraseña" required>                
+                    <div class="action">
+                        <button class="btn-flat" id="submit">Iniciar Sesión</button>
+                    </div>                
                 </div>
-
-                <div class="p-4">
-                <div class="table-responsive">
-                    <table class="table table-primary">
-                        <thead>
-                            <tr>
-                                <th scope="col">Alta de fabricantes</th>
-                                <th scope="col">Baja de fabricantes</th>
-                                <th scope="col">Actualización</th>
-                                <th scope="col">Listado</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="">
-                                <td scope="row"><a href="alta.php"><i class="bi-database-add px-3" style="font-size: 4rem; color:green;"></i></a></td>
-                                <td scope="row"><a href="baja.php"><i class="bi-database-dash px-3" style="font-size: 4rem; color:red;"></i></a></td>
-                                <td scope="row"><a href="actualiza.php"><i class="bi-database-check px-3" style="font-size: 4rem; color:yellow;"></a></i></td>
-                                <td scope="row"><a href="listado.php"><i class="bi-database-down px-3" style="font-size: 4rem; color:blue;"></i></a></td>
-                                </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
+                <div id="msg">                            
                 </div>
             </div>
-
-        </div>  
+        </form>
     </div>
-</div>
 
-
-
-
-<?php 
-include "footer.php"
-?>
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

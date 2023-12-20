@@ -1,4 +1,4 @@
-<?php include "conexion.php";?>
+<?php include "conexioncrud.php";?>
 <?php
     mysqli_select_db($conexion, "dreams3");
     $id_fabricante=$_POST["id_fabricante"];
