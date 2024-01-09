@@ -17,7 +17,12 @@
 		$_SESSION['usuario'] = $usuario;
 		header( 'Location: indexcrud.php' );
 	}
+	elseif{
+		session_start();
+		$_SESSION['adminisrador'] = $usuario;
+		header( 'Location: indexcrud.php' );
+	}
 	else{
-		header( 'Location: index.php' );		
+		header( 'Location: indexcrud.php' );		
 	}
 ?>

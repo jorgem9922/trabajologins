@@ -10,7 +10,7 @@ include "header.php"
                     Baja de producto realizada con éxito
                 </div>
             </div>
-            <a href="index.php"> <i class="bi-arrow-return-left px-3" style="font-size: 4rem; color:black;"></i> </a>
+            <a href="indexcrud.php"> <i class="bi-arrow-return-left px-3" style="font-size: 4rem; color:black;"></i> </a>
         </div>
     </div>
 </div>
