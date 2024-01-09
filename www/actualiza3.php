@@ -1,4 +1,4 @@
-<?php include "conexion.php";?>
+<?php include "conexioncrud.php";?>
 <?php
     
     $idm = $_GET["idmodifica"];

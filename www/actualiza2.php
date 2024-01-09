@@ -1,6 +1,6 @@
 <?php 
 include "header.php";
-include "conexion.php";
+include "conexioncrud.php";
 
 mysqli_Select_db($conexion, "dreams3");
 $productoactualizar = $_GET["id"];

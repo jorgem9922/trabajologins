@@ -1,6 +1,8 @@
-
-
 <?php 
+/* *********************************************************************** */
+/* *********************  ******************  **************************** */
+/* **************** Listado de productos en la BD ************************ */
+/* *********************************************************************** */
 include "conexioncrud.php";
 include "header.php";
 ?>
@@ -11,7 +13,7 @@ include "header.php";
 
             <div class="card">
                 <div class="card-header display-6">
-                    Baja de producto
+                    Listado de clientes
                 </div>                
             </div>
 
@@ -22,8 +24,8 @@ include "header.php";
                             Productos:
                         </div>
                         <?php
-                          mysqli_select_db($conexion,"dreams3");
-                          $consultar= "SELECT * FROM fabricantes";
+                          mysqli_select_db($conexion,"jorge");
+                          $consultar= "SELECT * FROM clientes";
 
                           $registros= mysqli_query($conexion, $consultar);
 
@@ -34,15 +36,10 @@ include "header.php";
                               <tr>
                                 <th scope="col">Identificador </th>
                                 <th scope="col">Nombre</th>
-                                <th scope="col">telefono</th>
-                                <th scope="col">CP</th>
-                                <th scope="col">Correo</th>
-                                <th scope="col">imagen</th>
-                                <th scope="col">Borrar</th>
-                              
+                                <th scope="col">Teléfono</th>
                               </tr>
                             </thead>
-                            <tbody>
+                            
                               <?php
 
                                 while($registro=mysqli_fetch_row($registros)){
@@ -55,10 +52,6 @@ include "header.php";
                                 <td><?php echo $registro[1]; ?></td>
                                 <td><?php echo $registro[2]; ?></td>
                                 <td><?php echo $registro[3]; ?></td>
-                                <td><?php echo $registro[4]; ?></td>
-                                
-                                <td><?php echo '<img width="100px" height="100px" src="imagenes/'. $registro[5]. '">'; ?>  </td>
-                                <td> <a href="baja2.php?id=<?php echo $registro[0]; ?>"><i class="bi-trash px-1" style="font-size: 2rem; color:red;"></i> </a></td>  
                               </tr>
                               
                             
@@ -66,7 +59,7 @@ include "header.php";
                                 }
                               ?>
 
-                            </tbody>
+                            
                             
                           </table>
                         </div>
