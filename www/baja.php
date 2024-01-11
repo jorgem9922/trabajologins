@@ -2,6 +2,7 @@
 
 <?php 
 include "conexioncrud.php";
+include "conexion.php";
 include "header.php";
 ?>
 
@@ -11,7 +12,7 @@ include "header.php";
 
             <div class="card">
                 <div class="card-header display-6">
-                    Baja de producto
+                    Baja de fabriante
                 </div>                
             </div>
 
@@ -19,7 +20,7 @@ include "header.php";
                 <div class="col-md-10">
                     <div class="card">
                         <div class="card-header"> 
-                            Productos:
+                            Fabricantes:
                         </div>
                         <?php
                           mysqli_select_db($conexion,"dreams3");

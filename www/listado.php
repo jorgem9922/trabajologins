@@ -13,7 +13,7 @@ include "header.php";
 
             <div class="card">
                 <div class="card-header display-6">
-                    Listado de productos
+                    Listado de fabricantes
                 </div>                
             </div>
 
@@ -21,7 +21,7 @@ include "header.php";
                 <div class="col-md-10">
                     <div class="card">
                         <div class="card-header"> 
-                            Productos:
+                            fabricantes:
                         </div>
                         <?php
                           mysqli_select_db($conexion,"dreams3");

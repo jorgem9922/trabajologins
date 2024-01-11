@@ -1,5 +1,5 @@
 <?php 
-include "conexion.php";
+include "conexioncrud.php";
 include "header.php";
 ?>
 
@@ -22,7 +22,6 @@ include "header.php";
                         <?php
                           mysqli_select_db($conexion,"dreams3");
                           $consultar= "SELECT * FROM fabricantes";
-
                           $registros= mysqli_query($conexion, $consultar);
 
                         ?>

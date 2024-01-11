@@ -11,7 +11,7 @@ include "header.php"
 
                 <div class="card-header display-6">
 
-                Alta de producto realizada con éxito
+                Alta de fabricante realizada con éxito
 
 
 

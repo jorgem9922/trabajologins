@@ -8,7 +8,7 @@ include "header.php"
 
             <div class="card">
                 <div class="card-header display-6">
-                    Alta de un producto
+                    Alta de un fabriante
                 </div>                
             </div>
 

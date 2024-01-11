@@ -15,7 +15,7 @@ $registro = mysqli_fetch_row($registros);
 
             <div class="card">
                 <div class="card-header display-6">
-                    Actualización de un producto
+                    Actualización de un fabricante
                 </div>                
             </div>
 

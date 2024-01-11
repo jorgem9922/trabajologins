@@ -1,3 +1,10 @@
+<?php 
+session_start();
+$usuario = $_SESSION['usuario'];
+if(!isset($usuario)){
+    header("Location: indexcrud.php");
+}
+?>
 <!doctype html>
 <html lang="es">
 
@@ -21,6 +28,14 @@
 <body>
   <header class="container-fluid bg-secondary  text-center py-3 display-4">
   Sistema Gestor de Inventariado de Productos
+  <ul class="nav navbar-nav pull-right hidden-xs">                       
+               <div class=bienvenidaalusuario> <p>
+                    Bienvenido<?php echo ":".$_SESSION['usuario'] ?>
+                </p> </div>               
+           
+        </ul>       
+  <a href="indexcrud.php"> <i class="bi bi-arrow-left"></i></i> </a>
     
+  
   </header>
   <main>
