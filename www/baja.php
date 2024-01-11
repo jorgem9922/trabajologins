@@ -1,6 +1,11 @@
-
-
 <?php 
+session_start();
+$usuario = $_SESSION['usuario'];
+if(!isset($usuario)){
+    header("Location: indexcrud.php");
+    exit;
+    header("Location: login.php");
+}
 include "conexioncrud.php";
 include "conexion.php";
 include "header.php";
@@ -12,7 +17,7 @@ include "header.php";
 
             <div class="card">
                 <div class="card-header display-6">
-                    Baja de fabriante
+                    Baja de fabricante
                 </div>                
             </div>
 

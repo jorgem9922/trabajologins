@@ -1,10 +1,4 @@
-<?php 
-session_start();
-$usuario = $_SESSION['usuario'];
-if(!isset($usuario)){
-    header("Location: indexcrud.php");
-}
-?>
+
 <!doctype html>
 <html lang="es">
 
@@ -27,6 +21,8 @@ if(!isset($usuario)){
 
 <body>
   <header class="container-fluid bg-secondary  text-center py-3 display-4">
+
+    <img src="/logo3dreams.ico" width="150" height="150" >
   Sistema Gestor de Inventariado de Productos
   <ul class="nav navbar-nav pull-right hidden-xs">                       
                <div class=bienvenidaalusuario> <p>
@@ -34,7 +30,7 @@ if(!isset($usuario)){
                 </p> </div>               
            
         </ul>       
-  <a href="indexcrud.php"> <i class="bi bi-arrow-left"></i></i> </a>
+  <a href="cerrarSesion.php" role="button"> <i class="bi bi-arrow-left"></i></i> </a>
     
   
   </header>

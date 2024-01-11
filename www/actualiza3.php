@@ -1,5 +1,6 @@
-<?php include "conexioncrud.php";?>
-<?php
+<?php include "conexioncrud.php";
+
+
     
     $idm = $_GET["idmodifica"];
     //$nombreantiguo = $_GET["fotografia"];
@@ -59,9 +60,9 @@
     // echo $correo_electronico;
     // echo $id_fabricante;
     // echo $idm;
-    echo $insertar;
+    
 
 
     mysqli_query($conexion, $insertar);
-    //header("Location:actualiza_ok.php");
+    header("Location:actualiza_ok.php");
     ?>

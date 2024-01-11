@@ -1,11 +1,11 @@
 <?php 
-
-/* *********************************************************************** */
-/* *********************  Programa principal  **************************** */
-/* **************** Menu de selección de opciones ************************ */
-/* *********************************************************************** */
-
-include "header.php"
+session_start();
+$usuario = $_SESSION['usuario'];
+if(!isset($usuario)){
+    header("Location: indexcrud.php");
+    exit;
+}
+include "header.php";
 ?>
 
 <div class="container my-5">

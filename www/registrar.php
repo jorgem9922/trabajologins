@@ -1,5 +1,11 @@
-<?php include "conexioncrud.php";?>
-<?php
+<?php include "conexioncrud.php";
+session_start();
+$usuario = $_SESSION['usuario'];
+if(!isset($usuario)){
+    header("Location: indexcrud.php");
+    exit;
+}
+
     mysqli_select_db($conexion, "dreams3");
     $id_fabricante=$_POST["id_fabricante"];
     $nombre = $_POST["nombre"];

@@ -1,8 +1,10 @@
 <?php 
-/* *********************************************************************** */
-/* *********************  ******************  **************************** */
-/* **************** Listado de productos en la BD ************************ */
-/* *********************************************************************** */
+session_start();
+$usuario = $_SESSION['usuario'];
+if(!isset($usuario)){
+    header("Location: indexcrud.php");
+    exit;
+}
 include "conexioncrud.php";
 include "header.php";
 ?>

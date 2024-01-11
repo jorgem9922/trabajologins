@@ -9,13 +9,22 @@
 	$sql = "SELECT COUNT(*) FROM usuario where(usuario='$usuario' and contra='$contra' and estado=1)";
 	$res = mysqli_query($conn,$sql);
 	$row = mysqli_fetch_array($res);
+
 	if($row[0] > 0 ){
 		session_start();
 		$_SESSION['usuario'] = $usuario;
-		header( 'Location: indexcrud.php' );
+		if($usuario=='admin'){
+			
+			header( 'Location: principal.php' );
+		}
+		else{
+			
+			$_SESSION['usuario'] = $usuario;
+			header( 'Location: indexcrud.php' );
+		}
 	}
 	else{
-		header( 'Location: index.php' );		
-		header( 'Location: indexcrud.php' );		
+				
+		header( 'Location: login.php' );		
 	}
 ?>

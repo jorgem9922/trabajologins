@@ -2,7 +2,8 @@
     session_start();
     $usuario = $_SESSION['usuario'];
     if(!isset($usuario)){
-        header("Location: indexcrud.php");
+        header("Location: index.php");
+        exit;
     }
 ?>
 <!DOCTYPE html>
